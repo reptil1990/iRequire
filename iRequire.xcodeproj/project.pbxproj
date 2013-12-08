@@ -21,6 +21,9 @@
 		B241E31418528391007F43D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F618528391007F43D8 /* UIKit.framework */; };
 		B241E31C18528391007F43D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B241E31A18528391007F43D8 /* InfoPlist.strings */; };
 		B241E31E18528391007F43D8 /* iRequireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E31D18528391007F43D8 /* iRequireTests.m */; };
+		B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E32F1852847C007F43D8 /* WishMusicViewController.m */; };
+		B241E33518529226007F43D8 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B241E33318529226007F43D8 /* FacebookSDKResources.bundle */; };
+		B26992031853F2DC00B80907 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26992021853F2DC00B80907 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		B241E31918528391007F43D8 /* iRequireTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRequireTests-Info.plist"; sourceTree = "<group>"; };
 		B241E31B18528391007F43D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B241E31D18528391007F43D8 /* iRequireTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRequireTests.m; sourceTree = "<group>"; };
+		B241E32F1852847C007F43D8 /* WishMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishMusicViewController.m; sourceTree = "<group>"; };
+		B241E3301852847C007F43D8 /* WishMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishMusicViewController.h; sourceTree = "<group>"; };
+		B241E33318529226007F43D8 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		B26992021853F2DC00B80907 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B241E2F518528391007F43D8 /* CoreGraphics.framework in Frameworks */,
+				B26992031853F2DC00B80907 /* FacebookSDK.framework in Frameworks */,
 				B241E2F718528391007F43D8 /* UIKit.framework in Frameworks */,
 				B241E2F318528391007F43D8 /* Foundation.framework in Frameworks */,
 			);
@@ -101,6 +109,8 @@
 		B241E2F118528391007F43D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B26992021853F2DC00B80907 /* FacebookSDK.framework */,
+				B241E33318529226007F43D8 /* FacebookSDKResources.bundle */,
 				B241E2F218528391007F43D8 /* Foundation.framework */,
 				B241E2F418528391007F43D8 /* CoreGraphics.framework */,
 				B241E2F618528391007F43D8 /* UIKit.framework */,
@@ -117,6 +127,8 @@
 				B241E30418528391007F43D8 /* Main.storyboard */,
 				B241E30718528391007F43D8 /* ViewController.h */,
 				B241E30818528391007F43D8 /* ViewController.m */,
+				B241E3301852847C007F43D8 /* WishMusicViewController.h */,
+				B241E32F1852847C007F43D8 /* WishMusicViewController.m */,
 				B241E30A18528391007F43D8 /* Images.xcassets */,
 				B241E2F918528391007F43D8 /* Supporting Files */,
 			);
@@ -230,6 +242,7 @@
 			files = (
 				B241E30B18528391007F43D8 /* Images.xcassets in Resources */,
 				B241E2FD18528391007F43D8 /* InfoPlist.strings in Resources */,
+				B241E33518529226007F43D8 /* FacebookSDKResources.bundle in Resources */,
 				B241E30618528391007F43D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +265,7 @@
 				B241E30918528391007F43D8 /* ViewController.m in Sources */,
 				B241E30318528391007F43D8 /* AppDelegate.m in Sources */,
 				B241E2FF18528391007F43D8 /* main.m in Sources */,
+				B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +392,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reptil/Documents/Programming/iRequire,
+					/Users/Reptil/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRequire/iRequire-Prefix.pch";
 				INFOPLIST_FILE = "iRequire/iRequire-Info.plist";
@@ -391,6 +410,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reptil/Documents/Programming/iRequire,
+					/Users/Reptil/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRequire/iRequire-Prefix.pch";
 				INFOPLIST_FILE = "iRequire/iRequire-Info.plist";
@@ -460,6 +484,7 @@
 				B241E32318528391007F43D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B241E32418528391007F43D8 /* Build configuration list for PBXNativeTarget "iRequireTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				B241E32618528391007F43D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

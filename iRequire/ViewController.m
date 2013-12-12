@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface ViewController ()
 
@@ -15,122 +16,146 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Create Login View so that the app will be granted "status_update" permission.
+    FBLoginView *loginview = [[FBLoginView alloc] init];
+    loginview.delegate = self;
     
-    
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark Catch User Info
-
-- (void)populateUserDetails {
-    if (FBSession.activeSession.isOpen) {
-        [[FBRequest requestForMe] startWithCompletionHandler:
-         ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-             if (!error) {
-                 self.userNameLabel.text = user.name;
-                 self.userProfileImage.profileID = [user objectForKey:@"id"];
-             }
-         }];
+    loginview.frame = CGRectOffset(loginview.frame, 5, 5);
+#ifdef __IPHONE_7_0
+#ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2)) - 10), ((self.view.center.y - (loginview.frame.size.width/2)) + 120));
     }
-}
-
-#pragma mark - FBLoginView delegate
-
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
+#endif
+#endif
+#endif
     
-    // Facebook SDK * login flow *
-    // Attempt to handle URLs to complete any auth (e.g., SSO) flow.
-    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication fallbackHandler:^(FBAppCall *call) {
-        // Facebook SDK * App Linking *
-        // For simplicity, this sample will ignore the link if the session is already
-        // open but a more advanced app could support features like user switching.
-        if (call.accessTokenData) {
-            if ([FBSession activeSession].isOpen) {
-                NSLog(@"INFO: Ignoring app link because current session is open.");
-            }
-            else {
-                [self handleAppLink:call.accessTokenData];
-            }
-        }
-    }];
-}
-
-- (void)handleAppLink:(FBAccessTokenData *)appLinkToken {
-    // Initialize a new blank session instance...
-    FBSession *appLinkSession = [[FBSession alloc] initWithAppID:nil
-                                                     permissions:nil
-                                                 defaultAudience:FBSessionDefaultAudienceNone
-                                                 urlSchemeSuffix:nil
-                                              tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance] ];
-    [FBSession setActiveSession:appLinkSession];
-    // ... and open it from the App Link's Token.
-    [appLinkSession openFromAccessTokenData:appLinkToken
-                          completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
-                              // Forward any errors to the FBLoginView delegate.
-                              if (error) {
-                                  [self.mainViewController loginView:nil handleError:error];
-                              }
-                          }];
-}
-
-
-
-- (void)loginView:(FBLoginView *)loginView
-      handleError:(NSError *)error{
-    NSString *alertMessage, *alertTitle;
+    [self.view addSubview:loginview];
     
-    // Facebook SDK * error handling *
-    // Error handling is an important part of providing a good user experience.
-    // Since this sample uses the FBLoginView, this delegate will respond to
-    // login failures, or other failures that have closed the session (such
-    // as a token becoming invalid). Please see the [- postOpenGraphAction:]
-    // and [- requestPermissionAndPost] on `SCViewController` for further
-    // error handling on other operations.
-    FBErrorCategory errorCategory = [FBErrorUtility errorCategoryForError:error];
-    if ([FBErrorUtility shouldNotifyUserForError:error]) {
-        // If the SDK has a message for the user, surface it. This conveniently
-        // handles cases like password change or iOS6 app slider state.
-        alertTitle = @"Something Went Wrong";
-        alertMessage = [FBErrorUtility userMessageForError:error];
-    } else if (errorCategory == FBErrorCategoryAuthenticationReopenSession) {
-        // It is important to handle session closures as mentioned. You can inspect
-        // the error for more context but this sample generically notifies the user.
-        alertTitle = @"Session Error";
-        alertMessage = @"Your current session is no longer valid. Please log in again.";
-    } else if (errorCategory == FBErrorCategoryUserCancelled) {
-        // The user has cancelled a login. You can inspect the error
-        // for more context. For this sample, we will simply ignore it.
-        NSLog(@"user cancelled login");
+    [loginview sizeToFit];
+}
+
+
+
+#pragma mark - FBLoginViewDelegate
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    // first get the buttons set for login mode
+
+    
+    // "Post Status" available when logged on and potentially when logged off.  Differentiate in the label.
+  }
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    // here we use helper properties of FBGraphUser to dot-through to first_name and
+    // id properties of the json response from the server; alternatively we could use
+    // NSDictionary methods such as objectForKey to get values from the my json object
+    self.labelFirstName.text = user.first_name;
+    // setting the profileID property of the FBProfilePictureView instance
+    // causes the control to fetch and display the profile picture for the user
+    self.profilePic.profileID = user.id;
+    self.loggedInUser = user;
+}
+
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+    // test to see if we can use the share dialog built into the Facebook application
+    FBShareDialogParams *p = [[FBShareDialogParams alloc] init];
+    p.link = [NSURL URLWithString:@"http://developers.facebook.com/ios"];
+#ifdef DEBUG
+    [FBSettings enableBetaFeatures:FBBetaFeaturesShareDialog];
+#endif
+    
+    
+    // "Post Status" available when logged on and potentially when logged off.  Differentiate in the label.
+    
+    self.profilePic.profileID = nil;
+    self.labelFirstName.text = nil;
+    self.loggedInUser = nil;
+}
+
+- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
+    // see https://developers.facebook.com/docs/reference/api/errors/ for general guidance on error handling for Facebook API
+    // our policy here is to let the login view handle errors, but to log the results
+    NSLog(@"FBLoginView encountered an error=%@", error);
+}
+
+#pragma mark -
+
+// Convenience method to perform some action that requires the "publish_actions" permissions.
+- (void) performPublishAction:(void (^)(void)) action {
+    // we defer request for permission to post to the moment of post, then we check for the permission
+    if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound) {
+        // if we don't already have the permission, then we request it now
+        [FBSession.activeSession requestNewPublishPermissions:@[@"publish_actions"]
+                                              defaultAudience:FBSessionDefaultAudienceFriends
+                                            completionHandler:^(FBSession *session, NSError *error) {
+                                                if (!error) {
+                                                    action();
+                                                } else if (error.fberrorCategory != FBErrorCategoryUserCancelled){
+                                                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Permission denied"
+                                                                                                        message:@"Unable to get permission to post"
+                                                                                                       delegate:nil
+                                                                                              cancelButtonTitle:@"OK"
+                                                                                              otherButtonTitles:nil];
+                                                    [alertView show];
+                                                }
+                                            }];
     } else {
-        // For simplicity, this sample treats other errors blindly, but you should
-        // refer to https://developers.facebook.com/docs/technical-guides/iossdk/errors/ for more information.
-        alertTitle  = @"Unknown Error";
-        alertMessage = @"Error. Please try again later.";
-        NSLog(@"Unexpected error:%@", error);
+        action();
     }
     
-    if (alertMessage) {
-        [[[UIAlertView alloc] initWithTitle:alertTitle
-                                    message:alertMessage
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
+}
+
+// UIAlertView helper for post buttons
+- (void)showAlert:(NSString *)message
+           result:(id)result
+            error:(NSError *)error {
+    
+    NSString *alertMsg;
+    NSString *alertTitle;
+    if (error) {
+        alertTitle = @"Error";
+        // Since we use FBRequestConnectionErrorBehaviorAlertUser,
+        // we do not need to surface our own alert view if there is an
+        // an fberrorUserMessage unless the session is closed.
+        if (error.fberrorUserMessage && FBSession.activeSession.isOpen) {
+            alertTitle = nil;
+            
+        } else {
+            // Otherwise, use a general "connection problem" message.
+            alertMsg = @"Operation failed due to a connection problem, retry later.";
+        }
+    } else {
+        NSDictionary *resultDict = (NSDictionary *)result;
+        alertMsg = [NSString stringWithFormat:@"Successfully posted '%@'.", message];
+        NSString *postId = [resultDict valueForKey:@"id"];
+        if (!postId) {
+            postId = [resultDict valueForKey:@"postId"];
+        }
+        if (postId) {
+            alertMsg = [NSString stringWithFormat:@"%@\nPost ID: %@", alertMsg, postId];
+        }
+        alertTitle = @"Success";
+    }
+    
+    if (alertTitle) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
+                                                            message:alertMsg
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
     }
 }
+
 
 
 @end

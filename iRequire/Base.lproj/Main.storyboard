@@ -46,6 +46,9 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Log into Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOD-t2-Q7s">
                                 <rect key="frame" x="64" y="179" width="200" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,14 +60,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqf-yZ-2N1" customClass="FBProfilePictureView">
-                                <rect key="frame" x="111" y="218" width="104" height="103"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KK5-1b-zXH" customClass="FBProfilePictureView">
+                                <rect key="frame" x="127" y="228" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="left" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uid-VP-lHu" customClass="FBLoginView">
-                                <rect key="frame" x="55" y="340" width="218" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -72,9 +70,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Yu-J4-yeY"/>
                     <connections>
-                        <outlet property="FBLoginView" destination="uid-VP-lHu" id="J1S-Un-X0P"/>
-                        <outlet property="userNameLabel" destination="kOD-t2-Q7s" id="j6R-pz-2wF"/>
-                        <outlet property="userProfileImage" destination="hqf-yZ-2N1" id="fTQ-ct-iHV"/>
+                        <outlet property="labelFirstName" destination="kOD-t2-Q7s" id="051-tB-kUu"/>
+                        <outlet property="profilePic" destination="KK5-1b-zXH" id="cFU-s9-ZHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vy5-KT-AQE" userLabel="First Responder" sceneMemberID="firstResponder"/>

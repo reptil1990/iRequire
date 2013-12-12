@@ -13,10 +13,10 @@
 
 @property (strong, nonatomic) ViewController *mainViewController;
 
-@property (unsafe_unretained, nonatomic) IBOutlet FBLoginView *FBLoginView;
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePic;
+@property (strong, nonatomic) IBOutlet UILabel *labelFirstName;
+@property (strong, nonatomic) id<FBGraphUser> loggedInUser;
 
-@property (strong, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
-@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 
 
 @end

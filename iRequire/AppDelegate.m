@@ -15,6 +15,10 @@
     // Override point for customization after application launch.
     [FBProfilePictureView class];
     [FBLoginView class];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+
+    
     return YES;
 }
 							

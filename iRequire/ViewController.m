@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
     // Create Login View so that the app will be granted "status_update" permission.
     FBLoginView *loginview = [[FBLoginView alloc] init];
     loginview.delegate = self;
@@ -31,7 +33,7 @@
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
-        loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2)) - 10), ((self.view.center.y - (loginview.frame.size.width/2)) + 120));
+        loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2)) - 10), ((self.view.center.y - (loginview.frame.size.width/2)) + 150));
     }
 #endif
 #endif
@@ -40,6 +42,8 @@
     [self.view addSubview:loginview];
     
     [loginview sizeToFit];
+    self.labelFirstName.textAlignment = NSTextAlignmentCenter;
+    
 }
 
 
@@ -49,7 +53,6 @@
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     // first get the buttons set for login mode
 
-    
     // "Post Status" available when logged on and potentially when logged off.  Differentiate in the label.
   }
 
@@ -58,11 +61,12 @@
     // here we use helper properties of FBGraphUser to dot-through to first_name and
     // id properties of the json response from the server; alternatively we could use
     // NSDictionary methods such as objectForKey to get values from the my json object
-    self.labelFirstName.text = user.first_name;
+    self.labelFirstName.text = [NSString stringWithFormat:@"%@ %@", user.first_name, user.last_name];
     // setting the profileID property of the FBProfilePictureView instance
     // causes the control to fetch and display the profile picture for the user
     self.profilePic.profileID = user.id;
     self.loggedInUser = user;
+    self.profilePic.alpha = 1.0;
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
@@ -79,6 +83,9 @@
     self.profilePic.profileID = nil;
     self.labelFirstName.text = nil;
     self.loggedInUser = nil;
+    
+    self.labelFirstName.text = [NSString stringWithFormat:@"Bitte einloggen!"];
+    self.profilePic.alpha = 0.0;
 }
 
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
@@ -88,31 +95,6 @@
 }
 
 #pragma mark -
-
-// Convenience method to perform some action that requires the "publish_actions" permissions.
-- (void) performPublishAction:(void (^)(void)) action {
-    // we defer request for permission to post to the moment of post, then we check for the permission
-    if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound) {
-        // if we don't already have the permission, then we request it now
-        [FBSession.activeSession requestNewPublishPermissions:@[@"publish_actions"]
-                                              defaultAudience:FBSessionDefaultAudienceFriends
-                                            completionHandler:^(FBSession *session, NSError *error) {
-                                                if (!error) {
-                                                    action();
-                                                } else if (error.fberrorCategory != FBErrorCategoryUserCancelled){
-                                                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Permission denied"
-                                                                                                        message:@"Unable to get permission to post"
-                                                                                                       delegate:nil
-                                                                                              cancelButtonTitle:@"OK"
-                                                                                              otherButtonTitles:nil];
-                                                    [alertView show];
-                                                }
-                                            }];
-    } else {
-        action();
-    }
-    
-}
 
 // UIAlertView helper for post buttons
 - (void)showAlert:(NSString *)message

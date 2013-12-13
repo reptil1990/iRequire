@@ -23,6 +23,28 @@
 		B241E31E18528391007F43D8 /* iRequireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E31D18528391007F43D8 /* iRequireTests.m */; };
 		B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E32F1852847C007F43D8 /* WishMusicViewController.m */; };
 		B26992031853F2DC00B80907 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26992021853F2DC00B80907 /* FacebookSDK.framework */; };
+		B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D9F966185A6FA4006D818E /* PayPalViewController.m */; };
+		B2D9F969185A7091006D818E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F968185A7091006D818E /* CoreMedia.framework */; };
+		B2D9F96B185A709A006D818E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F96A185A709A006D818E /* AVFoundation.framework */; };
+		B2D9F96D185A70B1006D818E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F96C185A70B1006D818E /* libiconv.dylib */; };
+		B2D9F9AA185A72A6006D818E /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9A4185A72A6006D818E /* libzbar.a */; };
+		B2D9F9AB185A72A6006D818E /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A6185A72A6006D818E /* zbar-back.png */; };
+		B2D9F9AC185A72A6006D818E /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A7185A72A6006D818E /* zbar-help.html */; };
+		B2D9F9AD185A72A6006D818E /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A8185A72A6006D818E /* zbar-helpicons.png */; };
+		B2D9F9AE185A72A6006D818E /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A9185A72A6006D818E /* zbar-samples.png */; };
+		B2D9F9B4185A7720006D818E /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9B0185A7720006D818E /* libPayPalMobile.a */; };
+		B2D9F9B6185A7751006D818E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9B5185A7751006D818E /* libxml2.dylib */; };
+		B2D9F9B8185A775D006D818E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9B7185A775D006D818E /* CFNetwork.framework */; };
+		B2D9F9BA185A776A006D818E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9B9185A776A006D818E /* MessageUI.framework */; };
+		B2D9F9BC185A777A006D818E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9BB185A777A006D818E /* SystemConfiguration.framework */; };
+		B2D9F9C9185A7C1D006D818E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C1185A7C1D006D818E /* check.png */; };
+		B2D9F9CA185A7C1D006D818E /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C2185A7C1D006D818E /* check@2x.png */; };
+		B2D9F9CB185A7C1D006D818E /* ios_sample_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C3185A7C1D006D818E /* ios_sample_icon.png */; };
+		B2D9F9CC185A7C1D006D818E /* ios_sample_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C4185A7C1D006D818E /* ios_sample_icon@2x.png */; };
+		B2D9F9CD185A7C1D006D818E /* button_secondary_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C5185A7C1D006D818E /* button_secondary_selected.png */; };
+		B2D9F9CE185A7C1D006D818E /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C6185A7C1D006D818E /* button_secondary_selected@2x.png */; };
+		B2D9F9CF185A7C1D006D818E /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C7185A7C1D006D818E /* button_secondary.png */; };
+		B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +80,52 @@
 		B241E32F1852847C007F43D8 /* WishMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishMusicViewController.m; sourceTree = "<group>"; };
 		B241E3301852847C007F43D8 /* WishMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishMusicViewController.h; sourceTree = "<group>"; };
 		B26992021853F2DC00B80907 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B2D9F965185A6FA4006D818E /* PayPalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalViewController.h; sourceTree = "<group>"; };
+		B2D9F966185A6FA4006D818E /* PayPalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalViewController.m; sourceTree = "<group>"; };
+		B2D9F968185A7091006D818E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B2D9F96A185A709A006D818E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B2D9F96C185A70B1006D818E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		B2D9F990185A72A6006D818E /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		B2D9F991185A72A6006D818E /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		B2D9F992185A72A6006D818E /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		B2D9F993185A72A6006D818E /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		B2D9F994185A72A6006D818E /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		B2D9F995185A72A6006D818E /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		B2D9F996185A72A6006D818E /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		B2D9F997185A72A6006D818E /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		B2D9F998185A72A6006D818E /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		B2D9F999185A72A6006D818E /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		B2D9F99A185A72A6006D818E /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		B2D9F99B185A72A6006D818E /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		B2D9F99C185A72A6006D818E /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		B2D9F99D185A72A6006D818E /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		B2D9F99E185A72A6006D818E /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		B2D9F99F185A72A6006D818E /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		B2D9F9A0185A72A6006D818E /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		B2D9F9A1185A72A6006D818E /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		B2D9F9A2185A72A6006D818E /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		B2D9F9A3185A72A6006D818E /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		B2D9F9A4185A72A6006D818E /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		B2D9F9A6185A72A6006D818E /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		B2D9F9A7185A72A6006D818E /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		B2D9F9A8185A72A6006D818E /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		B2D9F9A9185A72A6006D818E /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		B2D9F9B0185A7720006D818E /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		B2D9F9B1185A7720006D818E /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		B2D9F9B2185A7720006D818E /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		B2D9F9B3185A7720006D818E /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		B2D9F9B5185A7751006D818E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B2D9F9B7185A775D006D818E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B2D9F9B9185A776A006D818E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B2D9F9BB185A777A006D818E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B2D9F9C1185A7C1D006D818E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		B2D9F9C2185A7C1D006D818E /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		B2D9F9C3185A7C1D006D818E /* ios_sample_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_sample_icon.png; sourceTree = "<group>"; };
+		B2D9F9C4185A7C1D006D818E /* ios_sample_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios_sample_icon@2x.png"; sourceTree = "<group>"; };
+		B2D9F9C5185A7C1D006D818E /* button_secondary_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary_selected.png; sourceTree = "<group>"; };
+		B2D9F9C6185A7C1D006D818E /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
+		B2D9F9C7185A7C1D006D818E /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
+		B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +133,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D9F9BC185A777A006D818E /* SystemConfiguration.framework in Frameworks */,
+				B2D9F9BA185A776A006D818E /* MessageUI.framework in Frameworks */,
+				B2D9F9B8185A775D006D818E /* CFNetwork.framework in Frameworks */,
+				B2D9F9B6185A7751006D818E /* libxml2.dylib in Frameworks */,
+				B2D9F96D185A70B1006D818E /* libiconv.dylib in Frameworks */,
+				B2D9F96B185A709A006D818E /* AVFoundation.framework in Frameworks */,
+				B2D9F969185A7091006D818E /* CoreMedia.framework in Frameworks */,
+				B2D9F9B4185A7720006D818E /* libPayPalMobile.a in Frameworks */,
 				B241E2F518528391007F43D8 /* CoreGraphics.framework in Frameworks */,
 				B26992031853F2DC00B80907 /* FacebookSDK.framework in Frameworks */,
 				B241E2F718528391007F43D8 /* UIKit.framework in Frameworks */,
+				B2D9F9AA185A72A6006D818E /* libzbar.a in Frameworks */,
 				B241E2F318528391007F43D8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +184,15 @@
 		B241E2F118528391007F43D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2D9F9BB185A777A006D818E /* SystemConfiguration.framework */,
+				B2D9F9B9185A776A006D818E /* MessageUI.framework */,
+				B2D9F9B7185A775D006D818E /* CFNetwork.framework */,
+				B2D9F9B5185A7751006D818E /* libxml2.dylib */,
+				B2D9F9AF185A7720006D818E /* PayPalMobile */,
+				B2D9F98C185A72A6006D818E /* ZBarSDK */,
+				B2D9F96C185A70B1006D818E /* libiconv.dylib */,
+				B2D9F96A185A709A006D818E /* AVFoundation.framework */,
+				B2D9F968185A7091006D818E /* CoreMedia.framework */,
 				B26992021853F2DC00B80907 /* FacebookSDK.framework */,
 				B241E2F218528391007F43D8 /* Foundation.framework */,
 				B241E2F418528391007F43D8 /* CoreGraphics.framework */,
@@ -126,6 +212,8 @@
 				B241E30818528391007F43D8 /* ViewController.m */,
 				B241E3301852847C007F43D8 /* WishMusicViewController.h */,
 				B241E32F1852847C007F43D8 /* WishMusicViewController.m */,
+				B2D9F965185A6FA4006D818E /* PayPalViewController.h */,
+				B2D9F966185A6FA4006D818E /* PayPalViewController.m */,
 				B241E30A18528391007F43D8 /* Images.xcassets */,
 				B241E2F918528391007F43D8 /* Supporting Files */,
 			);
@@ -135,6 +223,7 @@
 		B241E2F918528391007F43D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2D9F9C0185A7C07006D818E /* Images */,
 				B241E2FA18528391007F43D8 /* iRequire-Info.plist */,
 				B241E2FB18528391007F43D8 /* InfoPlist.strings */,
 				B241E2FE18528391007F43D8 /* main.m */,
@@ -159,6 +248,96 @@
 				B241E31A18528391007F43D8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2D9F98C185A72A6006D818E /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F98D185A72A6006D818E /* Headers */,
+				B2D9F9A4185A72A6006D818E /* libzbar.a */,
+				B2D9F9A5185A72A6006D818E /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		B2D9F98D185A72A6006D818E /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F98E185A72A6006D818E /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		B2D9F98E185A72A6006D818E /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F98F185A72A6006D818E /* zbar */,
+				B2D9F999185A72A6006D818E /* zbar.h */,
+				B2D9F99A185A72A6006D818E /* ZBarCameraSimulator.h */,
+				B2D9F99B185A72A6006D818E /* ZBarCaptureReader.h */,
+				B2D9F99C185A72A6006D818E /* ZBarHelpController.h */,
+				B2D9F99D185A72A6006D818E /* ZBarImage.h */,
+				B2D9F99E185A72A6006D818E /* ZBarImageScanner.h */,
+				B2D9F99F185A72A6006D818E /* ZBarReaderController.h */,
+				B2D9F9A0185A72A6006D818E /* ZBarReaderView.h */,
+				B2D9F9A1185A72A6006D818E /* ZBarReaderViewController.h */,
+				B2D9F9A2185A72A6006D818E /* ZBarSDK.h */,
+				B2D9F9A3185A72A6006D818E /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		B2D9F98F185A72A6006D818E /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F990185A72A6006D818E /* Decoder.h */,
+				B2D9F991185A72A6006D818E /* Exception.h */,
+				B2D9F992185A72A6006D818E /* Image.h */,
+				B2D9F993185A72A6006D818E /* ImageScanner.h */,
+				B2D9F994185A72A6006D818E /* Processor.h */,
+				B2D9F995185A72A6006D818E /* Scanner.h */,
+				B2D9F996185A72A6006D818E /* Symbol.h */,
+				B2D9F997185A72A6006D818E /* Video.h */,
+				B2D9F998185A72A6006D818E /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		B2D9F9A5185A72A6006D818E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F9A6185A72A6006D818E /* zbar-back.png */,
+				B2D9F9A7185A72A6006D818E /* zbar-help.html */,
+				B2D9F9A8185A72A6006D818E /* zbar-helpicons.png */,
+				B2D9F9A9185A72A6006D818E /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2D9F9AF185A7720006D818E /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F9B0185A7720006D818E /* libPayPalMobile.a */,
+				B2D9F9B1185A7720006D818E /* PayPalMobile.h */,
+				B2D9F9B2185A7720006D818E /* PayPalPayment.h */,
+				B2D9F9B3185A7720006D818E /* PayPalPaymentViewController.h */,
+			);
+			path = PayPalMobile;
+			sourceTree = "<group>";
+		};
+		B2D9F9C0185A7C07006D818E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2D9F9C1185A7C1D006D818E /* check.png */,
+				B2D9F9C2185A7C1D006D818E /* check@2x.png */,
+				B2D9F9C3185A7C1D006D818E /* ios_sample_icon.png */,
+				B2D9F9C4185A7C1D006D818E /* ios_sample_icon@2x.png */,
+				B2D9F9C5185A7C1D006D818E /* button_secondary_selected.png */,
+				B2D9F9C6185A7C1D006D818E /* button_secondary_selected@2x.png */,
+				B2D9F9C7185A7C1D006D818E /* button_secondary.png */,
+				B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +417,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B241E30B18528391007F43D8 /* Images.xcassets in Resources */,
+				B2D9F9AC185A72A6006D818E /* zbar-help.html in Resources */,
+				B2D9F9CA185A7C1D006D818E /* check@2x.png in Resources */,
+				B2D9F9C9185A7C1D006D818E /* check.png in Resources */,
+				B2D9F9CC185A7C1D006D818E /* ios_sample_icon@2x.png in Resources */,
+				B2D9F9AE185A72A6006D818E /* zbar-samples.png in Resources */,
+				B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */,
+				B2D9F9CF185A7C1D006D818E /* button_secondary.png in Resources */,
+				B2D9F9AD185A72A6006D818E /* zbar-helpicons.png in Resources */,
+				B2D9F9CE185A7C1D006D818E /* button_secondary_selected@2x.png in Resources */,
+				B2D9F9CB185A7C1D006D818E /* ios_sample_icon.png in Resources */,
+				B2D9F9AB185A72A6006D818E /* zbar-back.png in Resources */,
 				B241E2FD18528391007F43D8 /* InfoPlist.strings in Resources */,
 				B241E30618528391007F43D8 /* Main.storyboard in Resources */,
+				B2D9F9CD185A7C1D006D818E /* button_secondary_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +451,7 @@
 			files = (
 				B241E30918528391007F43D8 /* ViewController.m in Sources */,
 				B241E30318528391007F43D8 /* AppDelegate.m in Sources */,
+				B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */,
 				B241E2FF18528391007F43D8 /* main.m in Sources */,
 				B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */,
 			);
@@ -396,6 +588,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRequire/iRequire-Prefix.pch";
 				INFOPLIST_FILE = "iRequire/iRequire-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reptil/Documents/Programming/iRequire/ZBarSDK,
+					/Users/Reptil/Documents/Programming/iRequire/PayPalMobile,
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +615,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRequire/iRequire-Prefix.pch";
 				INFOPLIST_FILE = "iRequire/iRequire-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Reptil/Documents/Programming/iRequire/ZBarSDK,
+					/Users/Reptil/Documents/Programming/iRequire/PayPalMobile,
+				);
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

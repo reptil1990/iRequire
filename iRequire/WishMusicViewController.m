@@ -138,7 +138,7 @@ bool isKeyboardVisible = FALSE;
         NSString *insertArtist = [_txtArtist.text stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
 
         
-        NSString *strURL = [NSString stringWithFormat:@"http://reptil1990.funpic.de/phpFile.php?Name=%1@&Artist=%2@&Titel=%3@&Genere=%d",insertName,insertArtist,insertTitle, [self.secGenere selectedSegmentIndex]];
+        NSString *strURL = [NSString stringWithFormat:@"http://reptil1990.funpic.de/phpFile.php?Name=%1@&Artist=%2@&Titel=%3@&Genere=%ld",insertName,insertArtist,insertTitle, (long)[self.secGenere selectedSegmentIndex]];
     
         NSLog(@"%@", strURL);
     

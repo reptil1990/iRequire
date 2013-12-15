@@ -29,6 +29,8 @@
     loginview.delegate = self;
     
     loginview.frame = CGRectOffset(loginview.frame, 5, 5);
+    
+    
 #ifdef __IPHONE_7_0
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
@@ -94,49 +96,6 @@
     NSLog(@"FBLoginView encountered an error=%@", error);
 }
 
-#pragma mark -
-
-// UIAlertView helper for post buttons
-- (void)showAlert:(NSString *)message
-           result:(id)result
-            error:(NSError *)error {
-    
-    NSString *alertMsg;
-    NSString *alertTitle;
-    if (error) {
-        alertTitle = @"Error";
-        // Since we use FBRequestConnectionErrorBehaviorAlertUser,
-        // we do not need to surface our own alert view if there is an
-        // an fberrorUserMessage unless the session is closed.
-        if (error.fberrorUserMessage && FBSession.activeSession.isOpen) {
-            alertTitle = nil;
-            
-        } else {
-            // Otherwise, use a general "connection problem" message.
-            alertMsg = @"Operation failed due to a connection problem, retry later.";
-        }
-    } else {
-        NSDictionary *resultDict = (NSDictionary *)result;
-        alertMsg = [NSString stringWithFormat:@"Successfully posted '%@'.", message];
-        NSString *postId = [resultDict valueForKey:@"id"];
-        if (!postId) {
-            postId = [resultDict valueForKey:@"postId"];
-        }
-        if (postId) {
-            alertMsg = [NSString stringWithFormat:@"%@\nPost ID: %@", alertMsg, postId];
-        }
-        alertTitle = @"Success";
-    }
-    
-    if (alertTitle) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
-                                                            message:alertMsg
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-}
 
 
 

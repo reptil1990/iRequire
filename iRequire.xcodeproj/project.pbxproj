@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21FAA4C185CE8B2001276FE /* ActualMusicInDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */; };
 		B241E2F318528391007F43D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F218528391007F43D8 /* Foundation.framework */; };
 		B241E2F518528391007F43D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F418528391007F43D8 /* CoreGraphics.framework */; };
 		B241E2F718528391007F43D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F618528391007F43D8 /* UIKit.framework */; };
@@ -45,6 +46,7 @@
 		B2D9F9CE185A7C1D006D818E /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C6185A7C1D006D818E /* button_secondary_selected@2x.png */; };
 		B2D9F9CF185A7C1D006D818E /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C7185A7C1D006D818E /* button_secondary.png */; };
 		B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */; };
+		B2F8F4FF185E6BEC004EE2EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F8F4FE185E6BEC004EE2EA /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21FAA4A185CE8B2001276FE /* ActualMusicInDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActualMusicInDB.h; sourceTree = "<group>"; };
+		B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualMusicInDB.m; sourceTree = "<group>"; };
 		B241E2EF18528391007F43D8 /* iRequire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRequire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B241E2F218528391007F43D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B241E2F418528391007F43D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +130,8 @@
 		B2D9F9C6185A7C1D006D818E /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
 		B2D9F9C7185A7C1D006D818E /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
 		B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
+		B2F8F4FD185E6BEC004EE2EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B2F8F4FE185E6BEC004EE2EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +218,10 @@
 				B241E30818528391007F43D8 /* ViewController.m */,
 				B241E3301852847C007F43D8 /* WishMusicViewController.h */,
 				B241E32F1852847C007F43D8 /* WishMusicViewController.m */,
+				B21FAA4A185CE8B2001276FE /* ActualMusicInDB.h */,
+				B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */,
+				B2F8F4FD185E6BEC004EE2EA /* Reachability.h */,
+				B2F8F4FE185E6BEC004EE2EA /* Reachability.m */,
 				B2D9F965185A6FA4006D818E /* PayPalViewController.h */,
 				B2D9F966185A6FA4006D818E /* PayPalViewController.m */,
 				B241E30A18528391007F43D8 /* Images.xcassets */,
@@ -449,8 +459,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21FAA4C185CE8B2001276FE /* ActualMusicInDB.m in Sources */,
 				B241E30918528391007F43D8 /* ViewController.m in Sources */,
 				B241E30318528391007F43D8 /* AppDelegate.m in Sources */,
+				B2F8F4FF185E6BEC004EE2EA /* Reachability.m in Sources */,
 				B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */,
 				B241E2FF18528391007F43D8 /* main.m in Sources */,
 				B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */,

@@ -52,6 +52,9 @@
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
     
+    self.datalabel.text = @"ca.graf@web.de;01.00;Rechnung";
+    
+    
 }
 
 
@@ -68,7 +71,7 @@
     ZBarReaderViewController* reader = [[ZBarReaderViewController alloc]init];
     reader.readerDelegate = self;
     reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-    reader.showsZBarControls=FALSE;
+    reader.showsZBarControls=TRUE;
     reader.cameraFlashMode=UIImagePickerControllerCameraFlashModeOff;
     
     ZBarImageScanner* scanner = reader.scanner;
@@ -88,14 +91,15 @@
     
     self.datalabel.text = symbols.data;
     
-    NSArray* qrdata = [symbols.data componentsSeparatedByString: @";"];
-    
+  NSArray* qrdata = [symbols.data componentsSeparatedByString: @";"];
+
     
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-     //[self pay:qrdata];
-}
+    [self performSelector:@selector(pay:) withObject:qrdata afterDelay:1];
+    }
+
 
 #pragma mark - PayPal
 
@@ -103,11 +107,9 @@
 
 
 
-//- (void)pay:(NSArray*)resiver{
--(IBAction)pay:(id)sender{
-    
-    NSArray* resiver = [self.datalabel.text componentsSeparatedByString: @";"];
+- (void)pay:(NSArray*)resiver{
 
+        
         NSString* Payto = [resiver objectAtIndex: 0];
         NSString* ammount = [resiver objectAtIndex: 1];
         NSString* description = [resiver objectAtIndex: 2];
@@ -150,7 +152,7 @@
     // - For live charges, use PayPalEnvironmentProduction (default).
     // - To use the PayPal sandbox, use PayPalEnvironmentSandbox.
     // - For testing, use PayPalEnvironmentNoNetwork.
-    [PayPalPaymentViewController setEnvironment:self.environment];
+    [PayPalPaymentViewController setEnvironment:PayPalEnvironmentNoNetwork];
     
     PayPalPaymentViewController *paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:kPayPalClientId
                                                                                                  receiverEmail:Payto
@@ -183,6 +185,8 @@
 - (void)sendCompletedPaymentToServer:(PayPalPayment *)completedPayment {
     // TODO: Send completedPayment.confirmation to server
     NSLog(@"Here is your proof of payment:\n\n%@\n\nSend this to your server for confirmation and fulfillment.", completedPayment.confirmation);
+    
+    
 }
 
 #pragma mark - PayPalPaymentDelegate methods

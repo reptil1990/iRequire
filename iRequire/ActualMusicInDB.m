@@ -53,6 +53,7 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     
     [self getData:data];
+        
     }
     else
     {

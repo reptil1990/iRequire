@@ -16,7 +16,7 @@
     [FBProfilePictureView class];
     [FBLoginView class];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+   // [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
 
     
     return YES;

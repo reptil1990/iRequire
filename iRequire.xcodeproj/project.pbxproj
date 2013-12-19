@@ -27,7 +27,6 @@
 		B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D9F966185A6FA4006D818E /* PayPalViewController.m */; };
 		B2D9F969185A7091006D818E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F968185A7091006D818E /* CoreMedia.framework */; };
 		B2D9F96B185A709A006D818E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F96A185A709A006D818E /* AVFoundation.framework */; };
-		B2D9F96D185A70B1006D818E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F96C185A70B1006D818E /* libiconv.dylib */; };
 		B2D9F9AA185A72A6006D818E /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F9A4185A72A6006D818E /* libzbar.a */; };
 		B2D9F9AB185A72A6006D818E /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A6185A72A6006D818E /* zbar-back.png */; };
 		B2D9F9AC185A72A6006D818E /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9A7185A72A6006D818E /* zbar-help.html */; };
@@ -47,6 +46,8 @@
 		B2D9F9CF185A7C1D006D818E /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C7185A7C1D006D818E /* button_secondary.png */; };
 		B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */; };
 		B2F8F4FF185E6BEC004EE2EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F8F4FE185E6BEC004EE2EA /* Reachability.m */; };
+		B2F8F79918637054004EE2EA /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F8F79818637054004EE2EA /* libiconv.dylib */; };
+		B2F8F79C18637916004EE2EA /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F8F79B18637916004EE2EA /* NavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,6 @@
 		B2D9F966185A6FA4006D818E /* PayPalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalViewController.m; sourceTree = "<group>"; };
 		B2D9F968185A7091006D818E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B2D9F96A185A709A006D818E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B2D9F96C185A70B1006D818E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		B2D9F990185A72A6006D818E /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		B2D9F991185A72A6006D818E /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		B2D9F992185A72A6006D818E /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -132,6 +132,9 @@
 		B2D9F9C8185A7C1D006D818E /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
 		B2F8F4FD185E6BEC004EE2EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B2F8F4FE185E6BEC004EE2EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B2F8F79818637054004EE2EA /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		B2F8F79A18637916004EE2EA /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = ../NavigationViewController.h; sourceTree = "<group>"; };
+		B2F8F79B18637916004EE2EA /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = ../NavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,11 +142,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F8F79918637054004EE2EA /* libiconv.dylib in Frameworks */,
 				B2D9F9BC185A777A006D818E /* SystemConfiguration.framework in Frameworks */,
 				B2D9F9BA185A776A006D818E /* MessageUI.framework in Frameworks */,
 				B2D9F9B8185A775D006D818E /* CFNetwork.framework in Frameworks */,
 				B2D9F9B6185A7751006D818E /* libxml2.dylib in Frameworks */,
-				B2D9F96D185A70B1006D818E /* libiconv.dylib in Frameworks */,
 				B2D9F96B185A709A006D818E /* AVFoundation.framework in Frameworks */,
 				B2D9F969185A7091006D818E /* CoreMedia.framework in Frameworks */,
 				B2D9F9B4185A7720006D818E /* libPayPalMobile.a in Frameworks */,
@@ -190,13 +193,13 @@
 		B241E2F118528391007F43D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2F8F79818637054004EE2EA /* libiconv.dylib */,
 				B2D9F9BB185A777A006D818E /* SystemConfiguration.framework */,
 				B2D9F9B9185A776A006D818E /* MessageUI.framework */,
 				B2D9F9B7185A775D006D818E /* CFNetwork.framework */,
 				B2D9F9B5185A7751006D818E /* libxml2.dylib */,
 				B2D9F9AF185A7720006D818E /* PayPalMobile */,
 				B2D9F98C185A72A6006D818E /* ZBarSDK */,
-				B2D9F96C185A70B1006D818E /* libiconv.dylib */,
 				B2D9F96A185A709A006D818E /* AVFoundation.framework */,
 				B2D9F968185A7091006D818E /* CoreMedia.framework */,
 				B26992021853F2DC00B80907 /* FacebookSDK.framework */,
@@ -214,6 +217,8 @@
 				B241E30118528391007F43D8 /* AppDelegate.h */,
 				B241E30218528391007F43D8 /* AppDelegate.m */,
 				B241E30418528391007F43D8 /* Main.storyboard */,
+				B2F8F79A18637916004EE2EA /* NavigationViewController.h */,
+				B2F8F79B18637916004EE2EA /* NavigationViewController.m */,
 				B241E30718528391007F43D8 /* ViewController.h */,
 				B241E30818528391007F43D8 /* ViewController.m */,
 				B241E3301852847C007F43D8 /* WishMusicViewController.h */,
@@ -463,6 +468,7 @@
 				B241E30918528391007F43D8 /* ViewController.m in Sources */,
 				B241E30318528391007F43D8 /* AppDelegate.m in Sources */,
 				B2F8F4FF185E6BEC004EE2EA /* Reachability.m in Sources */,
+				B2F8F79C18637916004EE2EA /* NavigationViewController.m in Sources */,
 				B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */,
 				B241E2FF18528391007F43D8 /* main.m in Sources */,
 				B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */,
@@ -590,6 +596,7 @@
 		B241E32218528391007F43D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -617,6 +624,7 @@
 		B241E32318528391007F43D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (

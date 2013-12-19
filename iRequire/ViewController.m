@@ -35,7 +35,7 @@
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
-        loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2)) - 10), ((self.view.center.y - (loginview.frame.size.width/2)) + 150));
+        loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2))), ((self.view.center.y - (loginview.frame.size.width/2)) - 50));
     }
 #endif
 #endif
@@ -69,6 +69,20 @@
     self.profilePic.profileID = user.id;
     self.loggedInUser = user;
     self.profilePic.alpha = 1.0;
+    
+    
+  /*  float imageY = 0;
+    NSLog(@"Size Width: %f",imageY);
+    float heightOfImageLayer  = self.profilePic.frame.size.width;//- (imageY * 2.0);
+    NSLog(@"Size Hight: %f",heightOfImageLayer);
+   self.profilePic.layer.cornerRadius = heightOfImageLayer/2;
+    self.profilePic.clipsToBounds = YES;
+*/
+    
+    //self.profilePic.layer.cornerRadius = 30.0;
+   // self.profilePic.clipsToBounds = YES;
+
+    
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {

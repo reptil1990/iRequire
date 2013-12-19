@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) ViewController *mainViewController;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *NavigationBarProfilePic;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePic;
 @property (strong, nonatomic) IBOutlet UILabel *labelFirstName;
 @property (strong, nonatomic) id<FBGraphUser> loggedInUser;

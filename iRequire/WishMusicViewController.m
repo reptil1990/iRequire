@@ -40,6 +40,16 @@ bool isKeyboardVisible = FALSE;
     
 }
 
+
+
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
+}
+
+
 -(void) getData:(NSData *) data{
     
     NSError *error;
@@ -51,12 +61,25 @@ bool isKeyboardVisible = FALSE;
 
 -(void) start {
     
-    NSURL *url = [NSURL URLWithString:kGETUrl];
+    //Read JSON Data from Server
     
-    NSData *data = [NSData dataWithContentsOfURL:url];
     
-    [self getData:data];
-    NSLog(@"Data: %@", data);
+    if ([self connected]) {
+        
+        NSURL *url = [NSURL URLWithString:kGETUrl];
+        
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        [self getData:data];
+        
+    }
+    else
+    {
+        UIAlertView *connection = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"Sorry you have no Internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [connection show];
+        
+    }
+    
     
 }
 
@@ -73,6 +96,7 @@ bool isKeyboardVisible = FALSE;
 - (IBAction)ConfirmAlert:(id)sender
 
 {
+    if ([self connected]) {
      
     [self start];
     
@@ -115,9 +139,17 @@ bool isKeyboardVisible = FALSE;
     
         UIAlertView *statusalert = [[UIAlertView alloc] initWithTitle:@"Disabled" message:@"Musicwish is not active!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [statusalert show];
-    
+    }
+    }
+    else
+    {
+        
+        UIAlertView *connection = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"Sorry you have no Internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [connection show];
     
     }
+    
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -179,6 +211,25 @@ bool isKeyboardVisible = FALSE;
 
 }
 
+
+-(void)Animation
+{
+
+    UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    
+    xAxis.minimumRelativeValue = @-40;
+    xAxis.maximumRelativeValue = @40;
+    
+    UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    
+    yAxis.minimumRelativeValue = @-40;
+    yAxis.maximumRelativeValue = @40;
+    
+    UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc]init];
+    group.motionEffects = @[xAxis, yAxis];
+    
+
+}
 
 
 @end

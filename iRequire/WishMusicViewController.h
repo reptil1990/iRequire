@@ -16,6 +16,9 @@
 
 
 #import <UIKit/UIKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
+
 #define kGETUrl @"http://reptil1990.funpic.de/getstatus.php"
 
 
@@ -35,4 +38,7 @@ NSMutableArray *json;
 
 - (IBAction)ConfirmAlert:(id)sender;
 - (IBAction)hideKeyboard:(id)sender;
+
+- (BOOL)connected;
+
 @end

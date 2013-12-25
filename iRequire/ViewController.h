@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelFirstName;
 @property (strong, nonatomic) id<FBGraphUser> loggedInUser;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollview;
+
+-(UIMotionEffectGroup*)paralax;
 
 
 @end

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B21FAA4C185CE8B2001276FE /* ActualMusicInDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */; };
+		B232D82F186B72AE0014493E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B232D82A186B72AE0014493E /* facebook.png */; };
+		B232D830186B72AE0014493E /* NACHRICHTEN.png in Resources */ = {isa = PBXBuildFile; fileRef = B232D82B186B72AE0014493E /* NACHRICHTEN.png */; };
+		B232D831186B72AE0014493E /* Pay with Paypal.png in Resources */ = {isa = PBXBuildFile; fileRef = B232D82C186B72AE0014493E /* Pay with Paypal.png */; };
+		B232D832186B72AE0014493E /* Unbenannt-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B232D82D186B72AE0014493E /* Unbenannt-1.png */; };
+		B232D834186B74400014493E /* Aktuelle Musikwünsche.png in Resources */ = {isa = PBXBuildFile; fileRef = B232D833186B74400014493E /* Aktuelle Musikwünsche.png */; };
 		B241E2F318528391007F43D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F218528391007F43D8 /* Foundation.framework */; };
 		B241E2F518528391007F43D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F418528391007F43D8 /* CoreGraphics.framework */; };
 		B241E2F718528391007F43D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F618528391007F43D8 /* UIKit.framework */; };
@@ -63,6 +68,11 @@
 /* Begin PBXFileReference section */
 		B21FAA4A185CE8B2001276FE /* ActualMusicInDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActualMusicInDB.h; sourceTree = "<group>"; };
 		B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualMusicInDB.m; sourceTree = "<group>"; };
+		B232D82A186B72AE0014493E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		B232D82B186B72AE0014493E /* NACHRICHTEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NACHRICHTEN.png; sourceTree = "<group>"; };
+		B232D82C186B72AE0014493E /* Pay with Paypal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pay with Paypal.png"; sourceTree = "<group>"; };
+		B232D82D186B72AE0014493E /* Unbenannt-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unbenannt-1.png"; sourceTree = "<group>"; };
+		B232D833186B74400014493E /* Aktuelle Musikwünsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Aktuelle Musikwünsche.png"; sourceTree = "<group>"; };
 		B241E2EF18528391007F43D8 /* iRequire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRequire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B241E2F218528391007F43D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B241E2F418528391007F43D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,6 +181,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B232D828186B728E0014493E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 		B241E2E618528391007F43D8 = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +360,12 @@
 		B2D9F9C0185A7C07006D818E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B232D833186B74400014493E /* Aktuelle Musikwünsche.png */,
+				B232D82A186B72AE0014493E /* facebook.png */,
+				B232D82B186B72AE0014493E /* NACHRICHTEN.png */,
+				B232D82C186B72AE0014493E /* Pay with Paypal.png */,
+				B232D82D186B72AE0014493E /* Unbenannt-1.png */,
+				B232D828186B728E0014493E /* Buttons */,
 				B2D9F9C1185A7C1D006D818E /* check.png */,
 				B2D9F9C2185A7C1D006D818E /* check@2x.png */,
 				B2D9F9C3185A7C1D006D818E /* ios_sample_icon.png */,
@@ -432,18 +455,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B241E30B18528391007F43D8 /* Images.xcassets in Resources */,
+				B232D830186B72AE0014493E /* NACHRICHTEN.png in Resources */,
 				B2D9F9AC185A72A6006D818E /* zbar-help.html in Resources */,
 				B2D9F9CA185A7C1D006D818E /* check@2x.png in Resources */,
+				B232D831186B72AE0014493E /* Pay with Paypal.png in Resources */,
 				B2D9F9C9185A7C1D006D818E /* check.png in Resources */,
+				B232D82F186B72AE0014493E /* facebook.png in Resources */,
 				B2D9F9CC185A7C1D006D818E /* ios_sample_icon@2x.png in Resources */,
 				B2D9F9AE185A72A6006D818E /* zbar-samples.png in Resources */,
 				B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */,
+				B232D834186B74400014493E /* Aktuelle Musikwünsche.png in Resources */,
 				B2D9F9CF185A7C1D006D818E /* button_secondary.png in Resources */,
 				B2D9F9AD185A72A6006D818E /* zbar-helpicons.png in Resources */,
 				B2D9F9CE185A7C1D006D818E /* button_secondary_selected@2x.png in Resources */,
 				B2D9F9CB185A7C1D006D818E /* ios_sample_icon.png in Resources */,
 				B2D9F9AB185A72A6006D818E /* zbar-back.png in Resources */,
 				B241E2FD18528391007F43D8 /* InfoPlist.strings in Resources */,
+				B232D832186B72AE0014493E /* Unbenannt-1.png in Resources */,
 				B241E30618528391007F43D8 /* Main.storyboard in Resources */,
 				B2D9F9CD185A7C1D006D818E /* button_secondary_selected.png in Resources */,
 			);

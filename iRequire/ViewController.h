@@ -19,6 +19,11 @@
 @property (strong, nonatomic) id<FBGraphUser> loggedInUser;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollview;
+@property (strong, nonatomic) IBOutlet UIImageView *firstImage;
+@property (strong, nonatomic) IBOutlet UIImageView *secondImage;
+@property (strong, nonatomic) IBOutlet UIImageView *thirdImage;
+@property (strong, nonatomic) IBOutlet UIImageView *forthImage;
+@property (strong, nonatomic) IBOutlet UIImageView *fifthImage;
 
 -(UIMotionEffectGroup*)paralax;
 

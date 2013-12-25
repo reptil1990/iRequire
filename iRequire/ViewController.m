@@ -28,27 +28,20 @@
     
     loginview.delegate = self;
     
-    loginview.frame = CGRectOffset(loginview.frame, 5, 5);
-    
-    
-#ifdef __IPHONE_7_0
-#ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0
+
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         loginview.frame = CGRectOffset(loginview.frame, ((self.view.center.x - (loginview.frame.size.width / 2))), ((self.view.center.y - (loginview.frame.size.width/2)) - 20));
     }
-#endif
-#endif
-#endif
-    
-    [self.view addSubview:loginview];
-    [loginview sizeToFit];
 
-    [self.view addSubview:loginview];
+
+    //[self.view addSubview:loginview];
     [loginview sizeToFit];
     [loginview addMotionEffect: self.paralax];
     
     self.labelFirstName.textAlignment = NSTextAlignmentCenter;
+    
+    
+    self.scrollview.contentSize =  CGSizeMake(320, 2000);
     
 }
 

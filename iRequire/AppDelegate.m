@@ -16,17 +16,17 @@
     [FBProfilePictureView class];
     [FBLoginView class];
     
-   // [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
-
     
-    return YES;
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    return  YES;
 }
-							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+
+   
+
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -62,17 +62,5 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-    // attempt to extract a token from the url
-    return [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication
-                    fallbackHandler:^(FBAppCall *call) {
-                        NSLog(@"In fallback handler");
-                    }];
-}
-
-
 @end
+

@@ -18,6 +18,21 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelFirstName;
 @property (strong, nonatomic) id<FBGraphUser> loggedInUser;
 
+@property (strong, nonatomic) IBOutlet UIButton *musicwish;
+@property (strong, nonatomic) IBOutlet UIButton *musicinDB;
+@property (strong, nonatomic) IBOutlet UIButton *messages;
+@property (strong, nonatomic) IBOutlet UIButton *facebook;
+@property (strong, nonatomic) IBOutlet UIButton *paypal;
+
+- (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
+- (void)userLoggedIn;
+- (void)userLoggedOut;
+
+
+
+- (IBAction)loginButton:(id)sender;
+
+
 
 
 @end

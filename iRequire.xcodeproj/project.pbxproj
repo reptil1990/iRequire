@@ -24,6 +24,11 @@
 		B241E31E18528391007F43D8 /* iRequireTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E31D18528391007F43D8 /* iRequireTests.m */; };
 		B241E3311852847C007F43D8 /* WishMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B241E32F1852847C007F43D8 /* WishMusicViewController.m */; };
 		B26992031853F2DC00B80907 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26992021853F2DC00B80907 /* FacebookSDK.framework */; };
+		B276463A186B79A50079DB14 /* Aktuelle Musikwünsche.png in Resources */ = {isa = PBXBuildFile; fileRef = B2764635186B79A50079DB14 /* Aktuelle Musikwünsche.png */; };
+		B276463B186B79A50079DB14 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B2764636186B79A50079DB14 /* facebook.png */; };
+		B276463C186B79A50079DB14 /* NACHRICHTEN.png in Resources */ = {isa = PBXBuildFile; fileRef = B2764637186B79A50079DB14 /* NACHRICHTEN.png */; };
+		B276463D186B79A50079DB14 /* Pay with Paypal.png in Resources */ = {isa = PBXBuildFile; fileRef = B2764638186B79A50079DB14 /* Pay with Paypal.png */; };
+		B276463E186B79A50079DB14 /* Unbenannt-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2764639186B79A50079DB14 /* Unbenannt-1.png */; };
 		B2D9F967185A6FA4006D818E /* PayPalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D9F966185A6FA4006D818E /* PayPalViewController.m */; };
 		B2D9F969185A7091006D818E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F968185A7091006D818E /* CoreMedia.framework */; };
 		B2D9F96B185A709A006D818E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D9F96A185A709A006D818E /* AVFoundation.framework */; };
@@ -85,6 +90,11 @@
 		B241E32F1852847C007F43D8 /* WishMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishMusicViewController.m; sourceTree = "<group>"; };
 		B241E3301852847C007F43D8 /* WishMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishMusicViewController.h; sourceTree = "<group>"; };
 		B26992021853F2DC00B80907 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B2764635186B79A50079DB14 /* Aktuelle Musikwünsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Aktuelle Musikwünsche.png"; sourceTree = "<group>"; };
+		B2764636186B79A50079DB14 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		B2764637186B79A50079DB14 /* NACHRICHTEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NACHRICHTEN.png; sourceTree = "<group>"; };
+		B2764638186B79A50079DB14 /* Pay with Paypal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pay with Paypal.png"; sourceTree = "<group>"; };
+		B2764639186B79A50079DB14 /* Unbenannt-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unbenannt-1.png"; sourceTree = "<group>"; };
 		B2D9F965185A6FA4006D818E /* PayPalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalViewController.h; sourceTree = "<group>"; };
 		B2D9F966185A6FA4006D818E /* PayPalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPalViewController.m; sourceTree = "<group>"; };
 		B2D9F968185A7091006D818E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -238,6 +248,7 @@
 		B241E2F918528391007F43D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B2764634186B79930079DB14 /* Buttons */,
 				B2D9F9C0185A7C07006D818E /* Images */,
 				B241E2FA18528391007F43D8 /* iRequire-Info.plist */,
 				B241E2FB18528391007F43D8 /* InfoPlist.strings */,
@@ -263,6 +274,18 @@
 				B241E31A18528391007F43D8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2764634186B79930079DB14 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B2764635186B79A50079DB14 /* Aktuelle Musikwünsche.png */,
+				B2764636186B79A50079DB14 /* facebook.png */,
+				B2764637186B79A50079DB14 /* NACHRICHTEN.png */,
+				B2764638186B79A50079DB14 /* Pay with Paypal.png */,
+				B2764639186B79A50079DB14 /* Unbenannt-1.png */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		B2D9F98C185A72A6006D818E /* ZBarSDK */ = {
@@ -432,9 +455,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B241E30B18528391007F43D8 /* Images.xcassets in Resources */,
+				B276463C186B79A50079DB14 /* NACHRICHTEN.png in Resources */,
 				B2D9F9AC185A72A6006D818E /* zbar-help.html in Resources */,
+				B276463A186B79A50079DB14 /* Aktuelle Musikwünsche.png in Resources */,
 				B2D9F9CA185A7C1D006D818E /* check@2x.png in Resources */,
+				B276463D186B79A50079DB14 /* Pay with Paypal.png in Resources */,
 				B2D9F9C9185A7C1D006D818E /* check.png in Resources */,
+				B276463B186B79A50079DB14 /* facebook.png in Resources */,
 				B2D9F9CC185A7C1D006D818E /* ios_sample_icon@2x.png in Resources */,
 				B2D9F9AE185A72A6006D818E /* zbar-samples.png in Resources */,
 				B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */,
@@ -444,6 +471,7 @@
 				B2D9F9CB185A7C1D006D818E /* ios_sample_icon.png in Resources */,
 				B2D9F9AB185A72A6006D818E /* zbar-back.png in Resources */,
 				B241E2FD18528391007F43D8 /* InfoPlist.strings in Resources */,
+				B276463E186B79A50079DB14 /* Unbenannt-1.png in Resources */,
 				B241E30618528391007F43D8 /* Main.storyboard in Resources */,
 				B2D9F9CD185A7C1D006D818E /* button_secondary_selected.png in Resources */,
 			);

@@ -49,6 +49,8 @@
         // If there's no cached session, we will show a login button
     }
     
+
+    
 }
 
 
@@ -138,9 +140,14 @@
     }
 }
 
+
+
+
 // Show the user the logged-out UI
 - (void)userLoggedOut
 {
+    
+    self.labelFirstName.text = @"Bitte einloggen";
 
      NSLog(@"UserLogOUT");
     
@@ -149,6 +156,8 @@
 // Show the user the logged-in UI
 - (void)userLoggedIn
 {
+    
+    
     NSLog(@"UserLogIn");
     
 }
@@ -159,52 +168,14 @@
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return [FBSession.activeSession handleOpenURL:url];
-}
-
-
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    // first get the buttons set for login mode
-
-    // "Post Status" available when logged on and potentially when logged off.  Differentiate in the label.
-  }
-
-- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
-                            user:(id<FBGraphUser>)user {
-
-    self.labelFirstName.text = [NSString stringWithFormat:@"%@ %@", user.first_name, user.last_name];
-
-    self.profilePic.profileID = user.id;
-    self.loggedInUser = user;
-    self.profilePic.alpha = 1.0;
+         annotation:(id)annotation {
     
-
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
     
-}
-
-- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
-
-    FBShareDialogParams *p = [[FBShareDialogParams alloc] init];
-    p.link = [NSURL URLWithString:@"http://developers.facebook.com/ios"];
-#ifdef DEBUG
-    [FBSettings enableBetaFeatures:FBBetaFeaturesShareDialog];
-#endif
+    // You can add your app-specific url handling code here if needed
     
-    
-    
-    self.profilePic.profileID = nil;
-    self.labelFirstName.text = nil;
-    self.loggedInUser = nil;
-    
-    self.labelFirstName.text = [NSString stringWithFormat:@"Bitte einloggen!"];
-    self.profilePic.alpha = 0.0;
-}
-
-- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
-
-    NSLog(@"FBLoginView encountered an error=%@", error);
+    return wasHandled;
 }
 
 

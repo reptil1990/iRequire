@@ -25,8 +25,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *paypal;
 
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
-- (void)userLoggedIn;
-- (void)userLoggedOut;
+- (void)LoggedIn;
+- (void)LoggedOut;
+- (void)roundButtons;
 
 
 

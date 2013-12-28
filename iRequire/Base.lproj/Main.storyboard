@@ -52,14 +52,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-nr-Cd2">
                                 <rect key="frame" x="0.0" y="266" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="NACHRICHTEN.png">
+                                <state key="normal" title="Nachrichten" image="NACHRICHTEN.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3Ew-GP-Hzi" kind="push" id="Jum-FD-KbS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGQ-Dq-vc8">
                                 <rect key="frame" x="0.0" y="367" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="facebook.png">
+                                <state key="normal" title="Facebook" image="facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -69,7 +72,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgy-uy-jX5">
                                 <rect key="frame" x="5" y="387" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,7 +90,6 @@
                         <outlet property="labelFirstName" destination="Tgy-uy-jX5" id="vFh-q9-12d"/>
                         <outlet property="messages" destination="2UH-nr-Cd2" id="uXJ-Yv-R5F"/>
                         <outlet property="musicinDB" destination="ooM-P8-7CB" id="yVJ-pG-yfb"/>
-                        <outlet property="musicwish" destination="cc5-9U-GUq" id="GWf-AD-A43"/>
                         <outlet property="paypal" destination="G9e-lj-o9h" id="s3L-ic-CUS"/>
                         <outlet property="profilePic" destination="hex-DV-7Kh" id="g2k-CH-xvX"/>
                     </connections>
@@ -96,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="-682" y="196"/>
         </scene>
-        <!--Pay Pal View Controller-->
+        <!--Pay Pal View Controller - PayPal-->
         <scene sceneID="fWL-8x-ZnI">
             <objects>
                 <viewController id="SWw-QH-dKt" customClass="PayPalViewController" sceneMemberID="viewController">
@@ -144,7 +146,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WeI-E3-KhT"/>
+                    <navigationItem key="navigationItem" title="PayPal" id="WeI-E3-KhT"/>
                     <connections>
                         <outlet property="payButton" destination="lw6-k1-Sei" id="lMW-au-f0Z"/>
                         <outlet property="successView" destination="sal-BZ-SvY" id="9gl-JB-TLV"/>
@@ -152,9 +154,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucP-VV-1kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="1493"/>
+            <point key="canvasLocation" x="-278" y="2173"/>
         </scene>
-        <!--Actual Music InDB-->
+        <!--Actual Music InDB - MusicDB-->
         <scene sceneID="ztg-Di-cbh">
             <objects>
                 <tableViewController id="6hr-qF-K0J" customClass="ActualMusicInDB" sceneMemberID="viewController">
@@ -167,24 +169,90 @@
                             <outlet property="delegate" destination="6hr-qF-K0J" id="Vip-Jf-tkp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="u6p-uX-NP6">
-                        <barButtonItem key="rightBarButtonItem" id="47u-Xn-JQ1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="f94-JY-Ia7">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="MusicDB" id="u6p-uX-NP6">
+                        <barButtonItem key="rightBarButtonItem" id="mEc-bt-A85">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="8am-3r-kde">
                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="refresh:" destination="6hr-qF-K0J" eventType="touchUpInside" id="KSy-uK-Qs4"/>
+                                    <action selector="refresh:" destination="6hr-qF-K0J" eventType="touchUpInside" id="9jL-9F-hI8"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mytableview" destination="b7y-9D-cD3" id="ltS-RG-v6t"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvm-g8-Vml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="866"/>
+            <point key="canvasLocation" x="-278" y="810"/>
+        </scene>
+        <!--Message View Controller - Text to DJ-->
+        <scene sceneID="uUr-fe-5le">
+            <objects>
+                <viewController id="3Ew-GP-Hzi" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="276-7l-cpL"/>
+                        <viewControllerLayoutGuide type="bottom" id="GF4-zo-lDs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6l-2X-ZjN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt0-qm-uVF">
+                                <rect key="frame" x="20" y="148" width="280" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVa-d1-Jve">
+                                <rect key="frame" x="20" y="510" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search the DJ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showBrowserVC:" destination="3Ew-GP-Hzi" eventType="touchUpInside" id="4ex-7V-oip"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Message here!" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPB-WL-R29">
+                                <rect key="frame" x="20" y="97" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-RV-kKH">
+                                <rect key="frame" x="263" y="510" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearmessages:" destination="3Ew-GP-Hzi" eventType="touchUpInside" id="rUQ-QJ-nBZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text to DJ" id="2ii-ND-b1x"/>
+                    <connections>
+                        <outlet property="browserButton" destination="iVa-d1-Jve" id="QQ5-ny-gVO"/>
+                        <outlet property="chatBox" destination="dPB-WL-R29" id="Wlx-bO-WjN"/>
+                        <outlet property="clearMessages" destination="vLG-RV-kKH" id="JEu-Wg-Byy"/>
+                        <outlet property="textBox" destination="Yt0-qm-uVF" id="eHZ-UD-ol1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AX-wj-jjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="1470"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="3sY-eT-wNd">
@@ -207,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="-1113" y="196"/>
         </scene>
-        <!--Wish Music View Controller-->
+        <!--Wish Music View Controller - MusicWish-->
         <scene sceneID="xFw-AY-1Qs">
             <objects>
                 <viewController id="B8I-v0-R8V" customClass="WishMusicViewController" sceneMemberID="viewController">
@@ -260,6 +328,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgN-pk-X9V">
                                 <rect key="frame" x="121" y="295" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Wish NOW!">
                                     <color key="titleColor" red="0.98823535442352295" green="0.89019614458084106" blue="0.011764707043766975" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
@@ -291,7 +360,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TXc-tL-svU"/>
+                    <navigationItem key="navigationItem" title="MusicWish" id="TXc-tL-svU"/>
                     <connections>
                         <outlet property="secGenere" destination="ct7-vJ-cig" id="qEE-QX-G0d"/>
                         <outlet property="txtArtist" destination="fQl-cJ-Op9" id="3ni-7h-dZC"/>

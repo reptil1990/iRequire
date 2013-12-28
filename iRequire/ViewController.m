@@ -32,6 +32,7 @@
     [self roundButtons];
     
     self.labelFirstName.textAlignment = NSTextAlignmentLeft;
+    self.labelFirstName.text = @"Bitte Einloggen";
     
     // Whenever a person opens the app, check for a cached session
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
@@ -49,10 +50,11 @@
         // If there's no cached session, we will show a login button
     }
     
-
+    self.profilePic.alpha = 0.0;
     
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
-
 
 
 #pragma mark - FBLoginViewDelegate
@@ -60,12 +62,11 @@
 
 - (IBAction)loginButton:(id)sender {
     // If the session state is any of the two "open" states when the button is clicked
-    if (FBSession.activeSession.state == FBSessionStateOpen
-        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
+    if (FBSession.activeSession.state == FBSessionStateOpen || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
         
-        // Close the session and remove the access token from the cache
-        // The session state handler (in the app delegate) will be called automatically
         [FBSession.activeSession closeAndClearTokenInformation];
+        
+        [self LoggedOut];
         
         // If the session state is not any of the two "open" states when the button is clicked
     } else {
@@ -77,7 +78,9 @@
          ^(FBSession *session, FBSessionState state, NSError *error) {
              
         [self sessionStateChanged:session state:state error:error];
+
          }];
+        
     }
 }
 
@@ -89,14 +92,29 @@
     if (!error && state == FBSessionStateOpen){
         NSLog(@"Session opened");
         
-        [self userLoggedIn];
+        {
+            
+            self.profilePic.alpha = 1.0;
+            
+            [[FBRequest requestForMe] startWithCompletionHandler:
+             ^(FBRequestConnection *connection,
+               NSDictionary<FBGraphUser> *user,
+               NSError *error) {
+                 if (!error) {
+                     self.labelFirstName.text = user.name;
+                     self.profilePic.profileID = user.id;
+                     
+                 }
+             }];
+
+        [self LoggedIn];
         return;
     }
     if (state == FBSessionStateClosed || state == FBSessionStateClosedLoginFailed){
         // If the session is closed
         NSLog(@"Session closed");
         // Show the user the logged-out UI
-        [self userLoggedOut];
+        [self LoggedOut];
     }
     
     // Handle errors
@@ -136,25 +154,26 @@
         // Clear this token
         [FBSession.activeSession closeAndClearTokenInformation];
         // Show the user the logged-out UI
-        [self userLoggedOut];
+        [self LoggedOut];
     }
 }
 
-
+}
 
 
 // Show the user the logged-out UI
-- (void)userLoggedOut
+- (void)LoggedOut
 {
-    
-    self.labelFirstName.text = @"Bitte einloggen";
 
      NSLog(@"UserLogOUT");
+    self.profilePic.alpha = 0.0;
+    self.labelFirstName.text = @"Bitte Einloggen";
+    
     
 }
 
 // Show the user the logged-in UI
-- (void)userLoggedIn
+- (void)LoggedIn
 {
     
     
@@ -165,19 +184,14 @@
 // During the Facebook login flow, your app passes control to the Facebook iOS app or Facebook in a mobile browser.
 // After authentication, your app will be called back with the session information.
 // Override application:openURL:sourceApplication:annotation to call the FBsession object that handles the incoming URL
-- (BOOL)application:(UIApplication *)application
+/*- (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     
-    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
-    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
-    
-    // You can add your app-specific url handling code here if needed
-    
-    return wasHandled;
+    return [FBSession handleOpenURL:url];
 }
-
+*/
 
 -(void)roundButtons
 {
@@ -205,12 +219,6 @@
 
 
 }
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 
 
 @end

@@ -24,7 +24,9 @@
     [super viewDidLoad];
     self.profilePic.alpha = 0.0;
     
-    [self roundButtons];
+   float corner = 15.0f;
+    
+    [self roundButtons:&corner];
     
     self.labelFirstName.textAlignment = NSTextAlignmentLeft;
     self.labelFirstName.text = @"Bitte Einloggen";
@@ -198,27 +200,27 @@
 
 
 
--(void)roundButtons
+- (void)roundButtons:(CGFloat*)radius
 {
     CALayer *musicwishlayer = [self.musicwish layer];
     [musicwishlayer setMasksToBounds:YES];
-    [musicwishlayer setCornerRadius:10.0f];
+    [musicwishlayer setCornerRadius:*radius];
     
     CALayer *musicinDBLayer = [self.musicinDB layer];
     [musicinDBLayer setMasksToBounds:YES];
-    [musicinDBLayer setCornerRadius:10.0f];
+    [musicinDBLayer setCornerRadius:*radius];
     
     CALayer *messagesLayer = [self.messages layer];
     [messagesLayer setMasksToBounds:YES];
-    [messagesLayer setCornerRadius:10.0f];
+    [messagesLayer setCornerRadius:*radius];
     
     CALayer *facebookLayer = [self.facebook layer];
     [facebookLayer setMasksToBounds:YES];
-    [facebookLayer setCornerRadius:10.0f];
+    [facebookLayer setCornerRadius:*radius];
     
     CALayer *paypalLayer = [self.paypal layer];
     [paypalLayer setMasksToBounds:YES];
-    [paypalLayer setCornerRadius:10.0f];
+    [paypalLayer setCornerRadius:*radius];
 
 
 

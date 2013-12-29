@@ -27,7 +27,7 @@
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 - (void)LoggedIn;
 - (void)LoggedOut;
-- (void)roundButtons;
+- (void)roundButtons:(CGFloat*)radius;
 
 
 

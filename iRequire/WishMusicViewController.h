@@ -41,4 +41,6 @@ NSMutableArray *json;
 
 - (BOOL)connected;
 
+-(UIMotionEffectGroup*)Animation;
+
 @end

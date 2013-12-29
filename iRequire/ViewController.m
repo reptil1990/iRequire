@@ -98,10 +98,7 @@
                  if (!error) {
                      self.labelFirstName.text = user.name;
                      self.profilePic.profileID = user.id;
-                     
-                     
-                 }
-             }];
+                 }}];
 
         [self LoggedIn];
         return;

@@ -196,6 +196,7 @@ bool isKeyboardVisible = FALSE;
                 UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went Wrong! Sorry!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert2 show];
                 
+                
             }
         
         }
@@ -212,7 +213,7 @@ bool isKeyboardVisible = FALSE;
 
 
 
--(void)Animation
+-(UIMotionEffectGroup*)Animation
 {
 
     UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc]initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
@@ -228,6 +229,7 @@ bool isKeyboardVisible = FALSE;
     UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc]init];
     group.motionEffects = @[xAxis, yAxis];
     
+    return group;
 
 }
 

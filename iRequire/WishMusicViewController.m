@@ -32,6 +32,9 @@ bool isKeyboardVisible = FALSE;
     
     NSLog(@"View Load!");
     
+    self.txtName.text = self.UserName;
+    
+    
     [self start];
    
 

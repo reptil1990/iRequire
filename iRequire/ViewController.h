@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "WishMusicViewController.h"
 
 @interface ViewController : UIViewController <FBLoginViewDelegate>
 

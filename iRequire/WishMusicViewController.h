@@ -36,6 +36,8 @@ NSMutableArray *json;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *secGenere;
 
+@property (strong, nonatomic) NSString *UserName;
+
 - (IBAction)ConfirmAlert:(id)sender;
 - (IBAction)hideKeyboard:(id)sender;
 

@@ -24,7 +24,7 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="B8I-v0-R8V" kind="push" id="5Xr-lJ-Uch"/>
+                                    <segue destination="B8I-v0-R8V" kind="push" identifier="toMusicWish" id="5Xr-lJ-Uch"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooM-P8-7CB">

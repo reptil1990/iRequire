@@ -52,7 +52,7 @@
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
     
-    self.datalabel.text = @"ca.graf@web.de;01.00;Rechnung";
+   // self.datalabel.text = @"ca.graf@web.de;01.00;Rechnung";
     
     
 }

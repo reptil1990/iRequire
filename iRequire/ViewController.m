@@ -186,6 +186,17 @@
 }
 */
 
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toMusicWish"]) {
+        WishMusicViewController *destViewController = segue.destinationViewController;
+        destViewController.UserName = self.labelFirstName.text;
+    }
+}
+
+
+
 -(void)roundButtons
 {
     CALayer *musicwishlayer = [self.musicwish layer];
@@ -212,6 +223,8 @@
 
 
 }
+
+
 
 
 @end

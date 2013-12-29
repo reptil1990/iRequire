@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.profilePic.alpha = 0.0;
     
     [self roundButtons];
     
@@ -32,6 +32,7 @@
     // Whenever a person opens the app, check for a cached session
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"Found a cached session");
+        self.profilePic.alpha = 1.0;
         // If there's one, just open the session silently, without showing the user the login UI
         [FBSession openActiveSessionWithReadPermissions:@[@"basic_info"]
                                            allowLoginUI:NO
@@ -45,7 +46,7 @@
         // If there's no cached session, we will show a login button
     }
     
-    self.profilePic.alpha = 0.0;
+    
     
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];

@@ -90,6 +90,7 @@
                         <outlet property="labelFirstName" destination="Tgy-uy-jX5" id="vFh-q9-12d"/>
                         <outlet property="messages" destination="2UH-nr-Cd2" id="uXJ-Yv-R5F"/>
                         <outlet property="musicinDB" destination="ooM-P8-7CB" id="yVJ-pG-yfb"/>
+                        <outlet property="musicwish" destination="cc5-9U-GUq" id="ayi-S9-jG9"/>
                         <outlet property="paypal" destination="G9e-lj-o9h" id="s3L-ic-CUS"/>
                         <outlet property="profilePic" destination="hex-DV-7Kh" id="g2k-CH-xvX"/>
                     </connections>

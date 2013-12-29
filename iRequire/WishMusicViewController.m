@@ -34,7 +34,6 @@ bool isKeyboardVisible = FALSE;
     
     [self start];
    
-    
 
 	// Do any additional setup after loading the view.
     
@@ -210,6 +209,7 @@ bool isKeyboardVisible = FALSE;
 [sender resignFirstResponder];
 
 }
+
 
 
 -(void)Animation

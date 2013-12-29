@@ -122,7 +122,7 @@
      
      seperatet by ";"
      
-     Example: Musikpark@paypal.de;50,20;Rechnung vom;
+     Example: Musikpark@paypal.de;50,20;Rechnungs ID 1248237;
      
      */
     

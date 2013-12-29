@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20ADDA2186FA409000C51AF /* Main4S.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20ADDA1186FA409000C51AF /* Main4S.storyboard */; };
 		B21FAA4C185CE8B2001276FE /* ActualMusicInDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */; };
 		B241E2F318528391007F43D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F218528391007F43D8 /* Foundation.framework */; };
 		B241E2F518528391007F43D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B241E2F418528391007F43D8 /* CoreGraphics.framework */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B20ADDA1186FA409000C51AF /* Main4S.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main4S.storyboard; sourceTree = "<group>"; };
 		B21FAA4A185CE8B2001276FE /* ActualMusicInDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActualMusicInDB.h; sourceTree = "<group>"; };
 		B21FAA4B185CE8B2001276FE /* ActualMusicInDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualMusicInDB.m; sourceTree = "<group>"; };
 		B241E2EF18528391007F43D8 /* iRequire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRequire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 				B241E30118528391007F43D8 /* AppDelegate.h */,
 				B241E30218528391007F43D8 /* AppDelegate.m */,
 				B241E30418528391007F43D8 /* Main.storyboard */,
+				B20ADDA1186FA409000C51AF /* Main4S.storyboard */,
 				B2F8F79A18637916004EE2EA /* NavigationViewController.h */,
 				B2F8F79B18637916004EE2EA /* NavigationViewController.m */,
 				B241E30718528391007F43D8 /* ViewController.h */,
@@ -481,6 +484,7 @@
 				B276463D186B79A50079DB14 /* Pay with Paypal.png in Resources */,
 				B2D9F9C9185A7C1D006D818E /* check.png in Resources */,
 				B276463B186B79A50079DB14 /* facebook.png in Resources */,
+				B20ADDA2186FA409000C51AF /* Main4S.storyboard in Resources */,
 				B2D9F9CC185A7C1D006D818E /* ios_sample_icon@2x.png in Resources */,
 				B2D9F9AE185A72A6006D818E /* zbar-samples.png in Resources */,
 				B2D9F9D0185A7C1D006D818E /* button_secondary@2x.png in Resources */,

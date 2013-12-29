@@ -23,11 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    FBLoginView *loginview = [[FBLoginView alloc] init];
-    
-    loginview.delegate = self;
-
-    [loginview sizeToFit];
     
     [self roundButtons];
     
@@ -103,6 +98,7 @@
                  if (!error) {
                      self.labelFirstName.text = user.name;
                      self.profilePic.profileID = user.id;
+                     
                      
                  }
              }];
